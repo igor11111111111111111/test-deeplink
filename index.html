@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deep Link Handler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function handleDeepLink() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const deepLink = urlParams.get('deep_link');
+            
+            if (deepLink) {
+                // Пытаемся открыть приложение
+                window.location.href = deepLink;
+                
+                // Если приложение не установлено, показываем кнопку для установки
+                setTimeout(function() {
+                    document.getElementById('install-button').style.display = 'block';
+                }, 2000);
+            }
+        }
+    </script>
+</head>
+<body onload="handleDeepLink()">
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>Deep Link Handler</h1>
+        <p>Если приложение не установлено, нажмите кнопку ниже:</p>
+        <button id="install-button" style="display: none; padding: 10px 20px; font-size: 16px;">
+            Установить приложение
+        </button>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.personal_gardener_app",
+    "sha256_cert_fingerprints": ["E4:0D:15:65:FC:E9:4B:07:59:0B:4C:26:E1:95:A2:A8:13:03:28:9A:82:01:C2:DF:5E:6C:44:C4:BD:B5:AE:AE"]
+  }
+}] 
